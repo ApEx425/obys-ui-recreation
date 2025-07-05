@@ -38,6 +38,7 @@ tl.from("#blow h5",{
     
 
 tl.to("#loader",{
+    y: -1000 ,
     opacity: 0 ,
     duration: 0.4 ,
     delay: 7, 
@@ -45,7 +46,6 @@ tl.to("#loader",{
 
 tl.from("#pag1",{
     delay:0.1 ,
-    y:1200 ,
     opacity:0 ,
     duration:0.8 ,
 
@@ -61,8 +61,10 @@ tl.from("#hero1 h1 , #hero2 h1 , #hero3 h1, #hero4 h1",{
 })
 
 
-
 }
+
+
+
  
 
 
