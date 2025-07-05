@@ -1,4 +1,5 @@
-var tl = gsap.timeline();
+function animationloader(){
+    var tl = gsap.timeline();
 
 tl.from(".line h1 ,h2",{
     y:150 ,
@@ -54,13 +55,42 @@ tl.to("#loader",{
     display:"none" ,
 })
 
+tl.from("#hero1 h1 , #hero2 h1 , #hero3 h1, #hero4 h1",{
+    y:150 ,
+    stagger:0.2,
+})
 
 
 
-//  font-family: "Atkinson Hyperlegible Mono", sans-serif;
-
-
-
+}
+ 
 
 
     
+
+
+function hoveranimation(){
+document.addEventListener("mousemove",function(dets){
+gsap.to("#crsr",{
+    left:dets.x ,
+    top:dets.y
+})
+}) 
+}
+
+function magnet(){
+ 
+  Shery.makeMagnet("#nav2 h4" /* Element to target.*/, {
+  //Parameters are optional.
+  ease:"cubic-bezier(0.23, 1, 0.320, 1)",
+   strength:2,
+   cursurFollow:true ,
+});
+}
+
+
+animationloader()
+hoveranimation()
+magnet()
+
+ 
