@@ -12,10 +12,11 @@ html,
 body {
   height: 100%;
   width: 100%;
- 
 }
 
-
+#main {
+  overflow-x: hidden;
+}
 #crsr {
   height: 2vw;
   width: 2vw;
@@ -130,11 +131,24 @@ h6 {
 }
 
 #pag1 {
-  height: 100vh;
+  height: 95vh;
   width: 100%;
   background-color: #151515;
+  position: relative;
+ 
 }
 
+#pag1::before {
+  content: "01";
+  position: absolute;
+  font-size: 3.5vw;
+  font-weight: 50;
+  font-family:"Poltawski Nowy", serif ;
+  font-style: italic;
+  left: 18vw;
+  top: 28vh;
+
+}
 #nav1 {
   padding: 2.3vw 5.5vw;
   display: flex;
@@ -151,6 +165,13 @@ h6 {
 #nav2 h4 {
   font-size: 0.8vw;
 }
+ 
+
+#attration{
+    width: 100%;
+    height: fit-content;
+    margin-top: 8vw;
+  }
 
 .hero {
   /* background-color: red; */
@@ -160,6 +181,7 @@ h6 {
   overflow: hidden;
   display: flex;
   align-items: center;
+  
 }
 .hero:nth-child(2) {
   margin-top: 15vh;
@@ -170,7 +192,10 @@ h6 {
   text-transform: uppercase;
   font-weight: 550;
   line-height: 7vw;
+  /* background-color: red; */
+  
 }
+
 
 #hero3 h1:hover {
   -webkit-text-stroke: 1px #ffff;
@@ -253,15 +278,27 @@ h6 {
   font-size: 7vw;
   text-transform: uppercase;
   font-weight: 500;
+  position: relative;
 }
 
+#pag4content h1::before {
+  content: "03";
+  position: absolute;
+  font-size: 3.5vw;
+  font-weight: 50;
+  font-family:"Poltawski Nowy", serif ;
+  font-style: italic;
+  left: -11vw;
+  top: -1vh;
+
+}
 .underline {
   height: 2px;
   width: 100%;
   background-color: #ffff;
-  margin: 5vw 0;
+  margin: 2.4vw 0;
   margin-top: 1vw;
-  }
+}
 
 #pag4content > p {
   font-size: 2.2vw;
@@ -311,12 +348,166 @@ h6 {
   font-size: 0.9vw;
 }
 
+#bo {
+  width: 100vw;
+  height: fit-content;
+  /* background-color: red; */
+  padding-bottom: 5vw;
+}
+
+#bo h3 {
+  font-family: "PT Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.9vw;
+}
+
 #pag5 {
   min-height: 100vh;
   width: 100%;
   background-color: #151515;
   position: relative;
-  margin-top: -5vw;
-  
+  /* margin-top: -5vw; */
+}
 
+.elem5 {
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+
+.elem5 h1,
+span {
+  /* background-color: red; */
+  display: inline-block;
+  font-size: 7vw;
+  -webkit-text-stroke: 0.7px #ffff;
+  font-weight: 100;
+  color: transparent;
+  text-transform: uppercase;
+  margin-right: 16px;
+}
+
+.elem5 h1 {
+  animation: textflow;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.elem5 span {
+  font-family: "Bodoni Moda", serif;
+  font-style: italic;
+}
+
+#elem52 h1 {
+  animation: textflow;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: reverse;
+  margin-bottom: 1vw;
+}
+
+@keyframes textflow {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 20px));
+  }
+}
+
+#footer {
+  width: 100%;
+  min-height: 120vh;
+  background-color: #151515;
+  position: relative;
+  margin-top: -5vw;
+}
+
+#footer-head {
+  width: 100%;
+  min-height: fit-content;
+  background-color: #3f7df4;
+}
+
+#footer-head h1 {
+  font-size: 8vw;
+  font-weight: 500;
+  text-transform: uppercase;
+  position: absolute;
+  top: 2vw;
+  left: 27.5vw;
+}
+
+#footer-head h1::before {
+  content: "04";
+  position: absolute;
+  font-size: 3.5vw;
+  font-weight: 50;
+  font-family:"Poltawski Nowy", serif ;
+  font-style: italic;
+  left: -11vw;
+  top: -1vh;
+
+}
+
+#footer-head i {
+  -webkit-text-stroke: 1px #ffff;
+  color: transparent;
+}
+#footer .underline {
+  width: 70%;
+  position: absolute;
+  top: 12vw;
+  left: 28vw;
+}
+
+#footer-div {
+  width: 70%;
+  height: fit-content;
+  /* background-color: red; */
+  position: relative;
+  top: 40vh;
+  left: 28vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.box h6 {
+  font-size: 1.2vw;
+  margin-bottom: 2vw;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+}
+
+.box h5 {
+  font-size: 1.6vw;
+  margin-bottom: 0.6vw;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+#pos {
+  width: 70%;
+  height: 3px;
+  background-color: #fff;
+  position: relative;
+  top: 65vh;
+  left: 28vw;
+}
+#footer > h6 {
+  position: relative;
+  top: 65vh;
+  left: 28vw;
+  font-size: 1vw;
+  margin-top: 1vw;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 100;
+  color: #ffffffb6;
+  text-transform: capitalize;
+}
+#footer h6 > i {
+  color: #ffffffb6;
 }

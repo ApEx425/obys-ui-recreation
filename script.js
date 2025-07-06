@@ -63,14 +63,6 @@ tl.from("#hero1 h1 , #hero2 h1 , #hero3 h1, #hero4 h1",{
 
 }
 
-
-
- 
-
-
-    
-
-
 function hoveranimation(){
 document.addEventListener("mousemove",function(dets){
 gsap.to("#crsr",{
@@ -89,6 +81,14 @@ function magnet(){
    cursurFollow:true ,
 });
 }
+
+ 
+
+
+    
+
+
+
 
 
 animationloader()
