@@ -4,19 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Obys Agency</title>
+    <!-- favion -->
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
+    <!-- locomotive css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+    <!-- sheryjs css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sheryjs/dist/Shery.css"
+    />
+    <!-- remixicon cdn -->
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
+    <!-- fontfile -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Bitcount+Grid+Double:wght@100..900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libertinus+Mono&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Suravaram&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=UoqMunThenKhung&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
-
+    <!-- styletag -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -40,7 +52,7 @@
       </div>
     </div>
     <div id="main">
-      <div id="pag1">
+      <div id="pag1" data-scroll data-scroll-speed="-1" >
         <div id="nav1">
           <svg class="brand__svg" width="71" height="27" viewBox="0 0 71 27">
             <path
@@ -102,15 +114,33 @@
           <div class="hero" id="hero4"><h1>experience</h1></div>
         </div>
       </div>
-      <div id="pag2">
+      <div id="pag2" data-scroll data-scroll-speed="-2" >
         <div id="videotag">
           <div id="videocrsr"><i class="ri-play-large-fill"></i></div>
           <div id="img"><img src="Showreel-2022-preview-1.jpg" alt="" /></div>
           <video autoplay loop muted src="Obys-Showreel-2024.mp4"></video>
         </div>
       </div>
-      <div id="pag3"></div>
-      <div id="pag4">
+      <div id="pag3" data-scroll data-scroll-speed="1">
+        <h1>OUR projects</h1>
+        <div class="underline"></div>
+        <div id="img-div-container">
+          <div class="img-div">
+            <img src="Olga_Prudka_1.png" alt="" />
+            <img src="Olga_Prudka_img8.png" alt="" />
+          </div>
+          <div class="img-div">
+            <img src="AIM-1.png" alt="" />
+            <img src="Olga_Prudka_3.png" alt="" />
+          </div>
+          <div class="img-div">
+            <img src="Laxer_1-2.png" alt="" />
+            <img src="Olga_Prudka_img12.png" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div id="pag4" data-scroll data-scroll-speed="2">
         <div id="pag4content">
           <h1>About Obys</h1>
           <div class="underline"></div>
@@ -157,7 +187,7 @@
           <div id="bo"><h3>We work with....</h3></div>
         </div>
       </div>
-      <div id="pag5">
+      <div id="pag5" data-scroll data-scroll-speed="-1">
         <div class="elem5">
           <h1><span id="italic">sport</span> - fasion - technology -</h1>
           <h1><span id="italic">sport</span> - fasion - technology -</h1>
@@ -175,7 +205,7 @@
           <h1>hotels - <span>music</span> - automotive -</h1>
         </div>
       </div>
-      <div id="footer">
+      <div id="footer" data-scroll data-scroll-speed="-1">
         <div id="footer-head">
           <h1>Let's Create <i class="ri-arrow-right-line"></i></h1>
           <div class="underline"></div>
@@ -205,24 +235,34 @@
         <div id="pos"></div>
         <h6>obys agency <i class="ri-copyright-line"></i>2025</h6>
       </div>
-    </div>
+      <!-- locomotive js -->
+      <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+      <!-- gsap cdn -->
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+        integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
+      <!-- scrolltrigger cdn -->
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+        integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
+      <!-- 3D js CDN -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
-      integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
-      integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      type="text/javascript"
-      src="https://unpkg.com/sheryjs/dist/Shery.js"
-    ></script>
-    <script src="script.js"></script>
+      <!-- ControlKit -->
+      <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+      <!-- shery js cdn -->
+      <script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/sheryjs/dist/Shery.js"
+      ></script>
+      <!-- JStag -->
+      <script src="script.js"></script>
+    </div>
   </body>
 </html>
