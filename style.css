@@ -129,7 +129,7 @@ h6 {
 }
 
 #pag1 {
-  height: 95vh;
+  height: 100vh;
   width: 100%;
   background-color: #151515;
   position: relative;
@@ -149,13 +149,14 @@ h6 {
 }
 
 #nav1 {
-  padding: 6.3vw 5.5vw;
+  padding: 2.3vw 5.5vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 #nav2 {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -169,16 +170,18 @@ h6 {
   width: 100%;
   height: fit-content;
   position: relative;
-  top: -6vw;
+  top: 1vw;
 }
 
 .hero {
-  margin-left: 35%;
+  
+  margin-left: 30%;
   width: 72%;
   height: fit-content;
   overflow: hidden;
   display: flex;
   align-items: center;
+  /* background-color: red; */
 }
 .hero:nth-child(2) {
   margin-top: 15vh;
@@ -229,7 +232,7 @@ h6 {
   align-items: center;
   justify-content: center;
   pointer-events: none;
-  transition: all ease 0.3s;
+  transition: all ease;
 }
 
 #videocrsr i {
@@ -655,11 +658,11 @@ span {
 #flag {
  height: 27vw;
   position: absolute;
-  transition: all ease 0.2s;
+  transition: linear;
   top: 0;
   left: 0;
   opacity: 0;
-  /* transform: translate(-50%,-50%); */
+  transform: translate(-50%,-50%);
 
 }
   

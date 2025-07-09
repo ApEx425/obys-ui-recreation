@@ -73,8 +73,8 @@ function animationloader() {
   tl.to("#loader", {
     y: -1000,
     opacity: 0,
-    duration: 0.4,
-    delay: 0,
+    duration: 1,
+    delay: 6,
   });
 
   tl.from("#pag1", {
@@ -98,14 +98,19 @@ function animationloader() {
   
 }
 
+
+
+
 function hoveranimation() {
+  Shery.makeMagnet("#nav2 h4",{
+    strength: 50,
+  });
   Shery.mouseFollower({
     skew: true,
-    ease: "cubic-bezier(0.23,1,0.320,1)",
     duration: 1,
   });
-
-  Shery.makeMagnet("#nav2 h4");
+  
+ 
 
   const videoContainer = document.querySelector("#videotag");
   const videoCursor = document.querySelector("#videocrsr");
@@ -133,7 +138,9 @@ function hoveranimation() {
       ).innerHTML = `<i class="ri-play-large-fill"></i>`;
       gsap.to("#videocrsr", {
         scale: 1,
+
       });
+      flag = 0 ;
     }
   });
 
@@ -170,53 +177,38 @@ function hoveranimation() {
       left: "80%",
     });
   });
+
+
 }
+
 
 function sheryAnimation() {
   Shery.imageEffect(".img-div", {
     style: 5,
     gooey: true,
-    // debug: true
+    debug: false,
     config: {
-      a: { value: 2.75, range: [0, 30] },
-      b: { value: -0.97, range: [-1, 1] },
-      zindex: { value: -9996999, range: [-9999999, 9999999] },
-      aspect: { value: 0.7499854889390236 },
-      ignoreShapeAspect: { value: true },
-      shapePosition: { value: { x: 0, y: 0 } },
-      shapeScale: { value: { x: 1, y: 1 } },
-      shapeEdgeSoftness: { value: 0, range: [0, 0.5] },
-      shapeRadius: { value: 0, range: [0, 2] },
-      currentScroll: { value: 0 },
-      scrollLerp: { value: 0.07 },
+      a: { value: 1.5 },
+      b: { value: -0.5 },
+      aspect: { value: 1 },
       gooey: { value: true },
       infiniteGooey: { value: true },
-      growSize: { value: 15, range: [1, 15] },
-      durationOut: { value: 5, range: [0.1, 5] },
-      durationIn: { value: 2.94, range: [0.1, 5] },
-      displaceAmount: { value: 0.5 },
-      masker: { value: false },
-      maskVal: { value: 1, range: [1, 5] },
-      scrollType: { value: 0 },
-      geoVertex: { range: [1, 64], value: 1 },
-      noEffectGooey: { value: true },
-      onMouse: { value: 0 },
-      noise_speed: { value: 0.2, range: [0, 10] },
-      metaball: { value: 0.2, range: [0, 2], _gsap: { id: 28 } },
-      discard_threshold: { value: 1, range: [0, 1] },
-      antialias_threshold: { value: 0.02, range: [0, 0.1] },
-      noise_height: { value: 0.5, range: [0, 2] },
-      noise_scale: { value: 10, range: [0, 100] },
+      growSize: { value: 50 },
+      durationOut: { value: 2 },
+      durationIn: { value: 2 },
+      displaceAmount: { value: 0.6 },
+      noise_scale: { value: 20 },
+      noise_speed: { value: 0.2 },
     },
-    delay:1
   });
 }
+
 
 function hero3animation() {
   document.addEventListener("mousemove", function (dets) {
     gsap.to("#flag", {
       x: dets.x - 160,
-      y: dets.y - 200,
+      y: dets.y -200,
     });
   });
   var hero3 = document.querySelector("#hero3");
@@ -235,14 +227,20 @@ function hero3animation() {
 }
 
 function lastanimation() {
-  gsap.from("#footer-head h1",{
-    opacity:0 ,
-    delay:5 ,
-    duration:4 , 
-    onStart: function() {
-      $('.tlt').textillate({ in: { effect: 'fadeIn' } });
-    }
-  })
+  // var font = document.querySelector("#footer-head h1");
+  // font.addEventListener("mousemove",function() {
+
+  //   gsap.from("#footer-head h1",{
+  //   opacity:0 ,
+  //   delay:.4 ,
+  //   duration:.7 , 
+  //   onStart: function() {
+  //     $('.tlt').textillate({ in: { effect: 'fadeIn' } });
+  //   }
+  // })
+  // })
+  
+  
 
 }
 
@@ -252,3 +250,4 @@ hoveranimation();
 sheryAnimation();
 animationloader();
 hero3animation();
+lastanimation();
